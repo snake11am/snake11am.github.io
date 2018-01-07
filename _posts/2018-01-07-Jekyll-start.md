@@ -174,9 +174,24 @@ $ jekyll s
 
 ### 购买域名
 
-可以在很多地方购买到域名，这里你们可以自己鉴别。
+可以在很多地方购买到域名，这里你们可以自己鉴别。一般卖域名的都会有DNS解析服务，我是在新网买的，一年35RMB。
 
-### 域名实名认证中，后续补充下面的内容
+### GitHub配置CNAME
+
+登录<http://github.com> >进入项目>Settings>Custom domain>输入你的域名>Save。
+
+### 配置DNS转发
+
+域名解析，增加两条A记录一条CNAME记录
+
+```JavaScript
+@          A             192.30.252.153
+@          A             192.30.252.154
+www      CNAME           username.github.io
+```
+
+大概十分钟以后就能生效啦~
+
 
 
 
